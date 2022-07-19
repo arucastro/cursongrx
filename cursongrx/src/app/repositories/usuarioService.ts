@@ -11,18 +11,18 @@ export class usuarioService {
   constructor(private http: HttpClient) {}
 
   getUsuarios() {
-    return this.http.get(this.baseUrl);
+    return this.http.get<usuarioModel[]>(this.baseUrl);
   }
 
   getUsuario(id: number) {
-    return this.http.get(this.baseUrl + id);
+    return this.http.get<usuarioModel>(this.baseUrl + id);
   }
 
   addUsuario(record: usuarioModel) {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');
 
-    return this.http.post(this.baseUrl, JSON.stringify(record), {
+    return this.http.post<usuarioModel>(this.baseUrl, JSON.stringify(record), {
       headers: headers,
     });
   }
@@ -31,7 +31,7 @@ export class usuarioService {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');
 
-    return this.http.put(this.baseUrl + record.id, JSON.stringify(record), {
+    return this.http.put<usuarioModel>(this.baseUrl + record.id, JSON.stringify(record), {
       headers: headers,
     });
   }
@@ -40,7 +40,7 @@ export class usuarioService {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');
 
-    return this.http.put(this.baseUrl + id, {
+    return this.http.delete(this.baseUrl + id, {
       headers: headers,
     });
   }
