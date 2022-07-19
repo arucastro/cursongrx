@@ -17,6 +17,12 @@
       "nome": "Loyd",
       "idade": 35,
       "perfil": "Spy"
+    },
+    {
+      "id": 4,
+      "nome": "Smokey",
+      "idade": "32",
+      "perfil": "Informer"
     }
-  ] 
+  ]
 }
