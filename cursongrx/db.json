@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Anya",
+      "idade": 5,
+      "perfil": "Esper"
+    },
+    {
+      "id": 2,
+      "nome": "Yor",
+      "idade": 25,
+      "perfil": "Assassin"
+    },
+    {
+      "id": 3,
+      "nome": "Loyd",
+      "idade": 35,
+      "perfil": "Spy"
+    }
+  ] 
+}
