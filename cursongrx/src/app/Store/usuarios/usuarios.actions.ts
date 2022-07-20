@@ -39,7 +39,7 @@ export const LoadUsuariosFail = createAction(
 //Load Usuario
 export const LoadUsuario = createAction(
   usuariosTypeActions.LOAD_USUARIO,
-  props<{ id: number }>()
+  props<{ payload: number }>()
 );
 
 export const LoadUsuarioSuccess = createAction(
