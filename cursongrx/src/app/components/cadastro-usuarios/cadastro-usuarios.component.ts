@@ -21,6 +21,7 @@ export class CadastroUsuariosComponent implements OnInit {
       this.store.dispatch(fromUsuariosAction.CreateUsuario({payload: this.model}))
     } else {
       //atualiza
+      this.store.dispatch(fromUsuariosAction.UpdateUsuario({payload: this.model}))
     }
   }
 }
