@@ -16,13 +16,21 @@
       <td>{{ row.perfil }}</td>
       <td>
         <button
-          class="btn-primary"
+          class="btn btn-primary"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           type="button"
           (click)="editar(row.id)"
         >
           Editar
+        </button>
+
+        <button
+          class="btn btn-secondary"
+          type="button"
+          (click)="excluir(row.id)"
+        >
+          Excluir
         </button>
       </td>
     </tr>
