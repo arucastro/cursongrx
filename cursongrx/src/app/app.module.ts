@@ -27,7 +27,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     FormsModule,
     StoreModule.forRoot(appReducer),
     EffectsModule.forRoot(appEffects),
-    StoreDevtoolsModule.instrument()
+    StoreDevtoolsModule.instrument(),
   ],
   providers: [],
   bootstrap: [AppComponent]

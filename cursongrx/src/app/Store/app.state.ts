@@ -10,6 +10,6 @@ export const appReducer: ActionReducerMap<AppState> ={
     usuarios: usuariosReducer
 }
 
-export const appEffects: any= {
+export const appEffects=[ 
     UsuariosEffects
-}
+]

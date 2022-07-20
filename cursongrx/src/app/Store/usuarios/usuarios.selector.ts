@@ -1,5 +1,4 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { filter } from 'rxjs';
 import { UsuariosState } from './usuarios.reducer';
 
 const getUsuarioFeatureState = createFeatureSelector<UsuariosState>('usuarios');
@@ -14,7 +13,7 @@ export const getUsuario = createSelector(
   (state: UsuariosState) => state.usuario
 );
 
-export const getUsuarioErorr = createSelector(
+export const getUsuarioError = createSelector(
   getUsuarioFeatureState,
   (state: UsuariosState) => state.error
 );
