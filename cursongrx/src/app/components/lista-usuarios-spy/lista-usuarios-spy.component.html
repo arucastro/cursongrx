@@ -1,0 +1,95 @@
+<p>JEITO 1!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Nome</td>
+        <td>Idade</td>
+        <td>Perfil</td>
+        <td>Ação</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of listaUsuariosSpy$ | async">
+        <td>{{ row.id }}</td>
+        <td>{{ row.nome }}</td>
+        <td>{{ row.idade }}</td>
+        <td>{{ row.perfil }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <P>JEITO 2</P>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Nome</td>
+        <td>Idade</td>
+        <td>Perfil</td>
+        <td>Ação</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of listaUsuariosSpy2">
+        <td>{{ row.id }}</td>
+        <td>{{ row.nome }}</td>
+        <td>{{ row.idade }}</td>
+        <td>{{ row.perfil }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <P>JEITO 3</P>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Nome</td>
+        <td>Idade</td>
+        <td>Perfil</td>
+        <td>Ação</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of listaUsuariosSpy3">
+        <td>{{ row.id }}</td>
+        <td>{{ row.nome }}</td>
+        <td>{{ row.idade }}</td>
+        <td>{{ row.perfil }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <P>JEITO 4</P>
+  <div class="col-6">
+    <label>Busca por perfil</label>
+    <input
+      id="busca"
+      name="busca"
+      type="text"
+      #busca
+    />
+  </div>
+    <button type="button" class="btn-primary" (click)="pesquisa(busca.value)">Pesquisar</button>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Nome</td>
+        <td>Idade</td>
+        <td>Perfil</td>
+        <td>Ação</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of listaUsuariosSpy4">
+        <td>{{ row.id }}</td>
+        <td>{{ row.nome }}</td>
+        <td>{{ row.idade }}</td>
+        <td>{{ row.perfil }}</td>
+      </tr>
+    </tbody>
+  </table>

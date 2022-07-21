@@ -1,4 +1,4 @@
-import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { createFeatureSelector, createSelector, props } from '@ngrx/store';
 import { UsuariosState } from './usuarios.reducer';
 
 const getUsuarioFeatureState = createFeatureSelector<UsuariosState>('usuarios');
@@ -18,8 +18,14 @@ export const getUsuarioError = createSelector(
   (state: UsuariosState) => state.error
 );
 
-export const getUsuariosEsper = createSelector(
+export const getUsuariosSpy = createSelector(
   getUsuarioFeatureState,
   (state: UsuariosState) =>
-    state.usuarios.filter((filter) => filter.perfil == 'Esper')
+    state.usuarios.filter((filter) => filter.perfil == 'Spy')
+);
+
+export const getUsuariosPerfil = createSelector(
+  getUsuarioFeatureState,
+  (state: UsuariosState, props:{perfil:string}) =>
+    state.usuarios.filter((filter) => filter.perfil == props.perfil)
 );

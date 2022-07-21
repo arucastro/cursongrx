@@ -23,6 +23,12 @@
       "nome": "Smokey",
       "idade": "32",
       "perfil": "Informer"
+    },
+    {
+      "id": 5,
+      "nome": "Beckyn",
+      "idade": "23",
+      "perfil": "Spy"
     }
   ]
 }

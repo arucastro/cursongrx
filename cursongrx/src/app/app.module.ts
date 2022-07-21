@@ -12,13 +12,15 @@ import { StoreModule } from '@ngrx/store';
 import { appEffects, appReducer } from './Store/app.state';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ListaUsuariosSpyComponent } from './components/lista-usuarios-spy/lista-usuarios-spy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarUsuariosComponent,
     MainComponent,
-    CadastroUsuariosComponent
+    CadastroUsuariosComponent,
+    ListaUsuariosSpyComponent
   ],
   imports: [
     BrowserModule,
